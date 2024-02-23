@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Eleição</h1>
-    
+
     <div id="loginSection">
         <h2>Insira a senha para votar:</h2>
         <input type="password" id="senhaInput">
@@ -19,15 +19,17 @@
     <div id="eleicaoSection" style="display: none;">
         <h2>Candidatos:</h2>
         <ul>
-            <li>Candidato 1 <span id="votosCandidato1">0</span> votos</li>
-            <li>Candidato 2 <span id="votosCandidato2">0</span> votos</li>
-            <li>Candidato 3 <span id="votosCandidato3">0</span> votos</li>
+            <li>100 União Estudantil <span id="votosCandidato1">0</span> votos</li>
+            <li>110 União pela Mudança <span id="votosCandidato2">0</span> votos</li>
+            <li>120 Liderança Consciente <span id="votosCandidato3">0</span> votos</li>
+            <li>130 Pão na Chapa <span id="votosCandidato4">0</span> votos</li>
         </ul>
 
         <h2>Votar:</h2>
-        <button onclick="votar(1)">Votar no Candidato 1</button>
-        <button onclick="votar(2)">Votar no Candidato 2</button>
-        <button onclick="votar(3)">Votar no Candidato 3</button>
+        <button onclick="votar(1)">100 União Estudantil</button>
+        <button onclick="votar(2)">110 União pela Mudança</button>
+        <button onclick="votar(3)">120 Liderança Consciente</button>
+        <button onclick="votar(4)">130 Pão na Chapa</button>
     </div>
 
     <script>
@@ -56,6 +58,10 @@
                 case 3:
                     var votosCandidato3 = document.getElementById("votosCandidato3");
                     votosCandidato3.textContent = parseInt(votosCandidato3.textContent) + 1;
+                    break;
+                case 4:
+                    var votosCandidato4 = document.getElementById("votosCandidato4");
+                    votosCandidato4.textContent = parseInt(votosCandidato4.textContent) + 1;
                     break;
                 default:
                     console.error("Candidato inválido");
